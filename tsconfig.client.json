@@ -1,0 +1,22 @@
+{
+  "extends": "./tsconfig.json",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "downlevelIteration": true,
+    "target": "es2015",
+    "module": "esnext",
+    "declaration": false,
+    "baseUrl": "./src/client",
+    "outDir": "./out-tsc/app",
+    "lib": ["es2018", "dom"],
+    "types": []
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  },
+  "files": ["src/client/main.ts", "src/client/polyfills.ts"],
+  "include": ["src/**/*.d.ts"]
+}
