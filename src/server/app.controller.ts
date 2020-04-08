@@ -1,4 +1,9 @@
-import { Controller } from "@nestjs/common";
+import { Controller } from '@nestjs/common';
+import { Observable, of } from 'rxjs';
 
 @Controller()
-export class AppController {}
+export class AppController {
+  getHello(): Observable<string> {
+    return of('Hello');
+  }
+}

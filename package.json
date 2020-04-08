@@ -57,7 +57,7 @@
         },
         "globals": {
           "ts-jest": {
-            "tsConfig": "<rootDir>/src/server/tsconfig.json"
+            "tsConfig": "<rootDir>/tsconfig.json"
           }
         },
         "coverageDirectory": "../coverage",

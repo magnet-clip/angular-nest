@@ -1,8 +1,8 @@
-import { TestBed, async } from "@angular/core/testing";
-import { RouterTestingModule } from "@angular/router/testing";
-import { AppComponent } from "./app.component";
+import { TestBed, async } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppComponent } from './app.component';
 
-describe("AppComponent", () => {
+describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
@@ -10,7 +10,7 @@ describe("AppComponent", () => {
     }).compileComponents();
   }));
 
-  it("should create the app", () => {
+  it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
@@ -19,15 +19,15 @@ describe("AppComponent", () => {
   it(`should have as title 'ang'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual("ang");
+    expect(app.title).toEqual('ang');
   });
 
-  xit("should render title", () => {
+  xit('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector(".content span").textContent).toContain(
-      "ang app is running!"
+    expect(compiled.querySelector('.content span').textContent).toContain(
+      'ang app is running!',
     );
   });
 });
