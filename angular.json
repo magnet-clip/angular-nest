@@ -25,7 +25,10 @@
             "aot": true,
             "assets": ["src/client/favicon.ico", "src/client/assets"],
             "styles": ["src/client/styles.less"],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/summernote/dist/summernote-lite.min.js"
+            ]
           },
           "configurations": {
             "production": {
