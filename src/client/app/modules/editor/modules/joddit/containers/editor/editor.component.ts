@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  template: 'Hi Joddit Editor',
+  templateUrl: './editor.component.html',
+  styleUrls: ['./editor.component.less'],
 })
 export class JodditEditorComponent {}
