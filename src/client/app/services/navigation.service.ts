@@ -1,19 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Route } from '@angular/router';
-
-type RouteWithLabel = Route & { label: string; free: boolean };
+import { Store } from '@ngrx/store';
+import { Editor } from '../models/editor';
+import { editorSelect } from '../store/app.actions';
+import { getAllEditors } from '../store/app.selectors';
 
 @Injectable({
   providedIn: 'root',
 })
 export class NavigationService {
-  // TODO move this stuff to constants, pick via selector. Then I can store additional info like links and whatever
-  public routes: RouteWithLabel[] = [
-    { path: '/summernote', label: 'Summernote', free: true },
-    { path: '/joddit', label: 'Joddit', free: true },
-    { path: '/quill', label: 'Quill', free: true },
-    { path: '/ngx-wig', label: 'Ngx-Wig', free: true },
-    { path: '/froala', label: 'Froala', free: false },
-    { path: '/ckeditor', label: 'CKEditor', free: false },
-  ];
+  editors$ = this.store.select(getAllEditors);
+
+  public navigate(editor: Editor) {
+    this.store.dispatch(editorSelect({ editor }));
+  }
+
+  constructor(private store: Store<any>) {}
 }

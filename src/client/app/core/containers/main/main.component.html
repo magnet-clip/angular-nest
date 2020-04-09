@@ -1,6 +1,9 @@
 <div class="page">
   <header class="header">
-    <app-navigation></app-navigation>
+    <app-navigation
+      [editors]="facade.editors$ | async"
+      (navigate)="facade.navigate($event)"
+    ></app-navigation>
   </header>
   <section class="content">
     <router-outlet></router-outlet>
