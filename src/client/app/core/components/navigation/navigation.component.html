@@ -1,1 +1,9 @@
-Navigation ][ULe
+<div class="menu-bar">
+  <div class="menu-bar__wrapper">
+    <span *ngFor="let route of facade.routes" class="menu-item">
+      <span class="menu-item__label" [routerLink]="route.path">{{
+        route.label
+      }}</span>
+    </span>
+  </div>
+</div>
