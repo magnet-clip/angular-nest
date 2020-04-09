@@ -8,6 +8,13 @@ const routes: Routes = [
     component: EditorLayoutContainerComponent,
     children: [
       {
+        path: 'quill',
+        loadChildren: () =>
+          import('../editor/modules/quill/quill.module').then(
+            m => m.QuillEditorModule,
+          ),
+      },
+      {
         path: 'summernote',
         loadChildren: () =>
           import('../editor/modules/summernote/summernote.module').then(
@@ -15,7 +22,7 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'joddit',
+        path: 'jodit',
         loadChildren: () =>
           import('../editor/modules/joddit/joddit.module').then(
             m => m.JodditModule,
