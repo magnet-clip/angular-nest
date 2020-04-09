@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
+import { SummernoteEditorComponent } from './components/editor/editor.component';
+import { SummernoteRouterModule } from './summernote-router.module';
 
 @NgModule({
-  imports: [],
+  imports: [SummernoteRouterModule],
   exports: [],
-  declarations: [],
+  declarations: [SummernoteEditorComponent],
   providers: [],
 })
 export class SummernoteModule {}

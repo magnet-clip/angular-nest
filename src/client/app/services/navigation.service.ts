@@ -10,7 +10,7 @@ export class NavigationService {
   // TODO move this stuff to constants, pick via selector. Then I can store additional info like links and whatever
   public routes: RouteWithLabel[] = [
     { path: '/summernote', label: 'Summernote', free: true },
-    { path: '/jodit', label: 'Jodit', free: true },
+    { path: '/joddit', label: 'Joddit', free: true },
     { path: '/quill', label: 'Quill', free: true },
     { path: '/ngx-wig', label: 'Ngx-Wig', free: true },
     { path: '/froala', label: 'Froala', free: false },
