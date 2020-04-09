@@ -5,7 +5,7 @@ import * as appActions from './app.actions';
 const appReducer = createReducer(
   APP_INITIAL_STATE,
   on(
-    appActions.editorSelect,
+    appActions.editorSelected,
     (state: IAppState, { editor }): IAppState => {
       return {
         ...state,
@@ -13,6 +13,15 @@ const appReducer = createReducer(
           ...item,
           selected: item.path === editor.path,
         })),
+      };
+    },
+  ),
+  on(
+    appActions.noEditorSelected,
+    (state: IAppState): IAppState => {
+      return {
+        ...state,
+        editors: [...APP_INITIAL_STATE.editors],
       };
     },
   ),

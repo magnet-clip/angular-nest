@@ -4,6 +4,11 @@ import { Editor } from '../models/editor';
 
 const currentModule: AppModuleName = 'Core';
 
+export const checkCurrentRoute = createAction(
+  getActionName(currentModule, 'initCurrentRoute'),
+  props<{ url: string }>(),
+);
+
 export const editorSelect = createAction(
   getActionName(currentModule, 'editorSelect'),
   props<{ editor: Editor }>(),
@@ -12,4 +17,8 @@ export const editorSelect = createAction(
 export const editorSelected = createAction(
   getActionName(currentModule, 'editorSelected'),
   props<{ editor: Editor }>(),
+);
+
+export const noEditorSelected = createAction(
+  getActionName(currentModule, 'noEditorSelected'),
 );
