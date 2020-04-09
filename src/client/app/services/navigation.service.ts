@@ -4,7 +4,7 @@ import { Editor } from '../models/editor';
 import { editorSelect, checkCurrentRoute } from '../store/app.actions';
 import { getAllEditors } from '../store/app.selectors';
 import { Router, NavigationEnd } from '@angular/router';
-import { filter, map, tap } from 'rxjs/operators';
+import { filter, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',

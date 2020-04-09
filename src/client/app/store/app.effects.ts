@@ -30,6 +30,7 @@ export class AppEffects {
       }),
     ),
   );
+
   editorSelect$ = createEffect(() =>
     this.actions$.pipe(
       ofType(editorSelect),
