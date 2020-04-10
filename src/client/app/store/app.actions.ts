@@ -1,6 +1,6 @@
 import { createAction, props } from '@ngrx/store';
 import { getActionName, AppModuleName } from '../shared/helpers/action-name';
-import { Editor } from '../models/editor';
+import { NavPage } from '../models/nav-page';
 
 const currentModule: AppModuleName = 'Core';
 
@@ -11,12 +11,12 @@ export const checkCurrentRoute = createAction(
 
 export const editorSelect = createAction(
   getActionName(currentModule, 'editorSelect'),
-  props<{ editor: Editor }>(),
+  props<{ page: NavPage }>(),
 );
 
 export const editorSelected = createAction(
   getActionName(currentModule, 'editorSelected'),
-  props<{ editor: Editor }>(),
+  props<{ page: NavPage }>(),
 );
 
 export const noEditorSelected = createAction(

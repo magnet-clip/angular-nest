@@ -1,7 +1,6 @@
 import { Component, Input, Output } from '@angular/core';
-import { NavigationService } from '../../../services/navigation.service';
-import { Editor } from '../../../models/editor';
-import { Observable, Subject } from 'rxjs';
+import { Subject } from 'rxjs';
+import { NavPage } from '../../../models/nav-page';
 
 @Component({
   templateUrl: './navigation.component.html',
@@ -9,7 +8,7 @@ import { Observable, Subject } from 'rxjs';
   selector: 'app-navigation',
 })
 export class NavigationComponent {
-  @Input() editors: Editor[];
-  @Output() navigate = new Subject<Editor>();
+  @Input() pages: NavPage[];
+  @Output() navigate = new Subject<NavPage>();
   constructor() {}
 }

@@ -6,12 +6,12 @@ const appReducer = createReducer(
   APP_INITIAL_STATE,
   on(
     appActions.editorSelected,
-    (state: IAppState, { editor }): IAppState => {
+    (state: IAppState, { page }): IAppState => {
       return {
         ...state,
-        editors: state.editors.map(item => ({
+        pages: state.pages.map(item => ({
           ...item,
-          selected: item.path === editor.path,
+          selected: item.path === page.path,
         })),
       };
     },
@@ -21,7 +21,7 @@ const appReducer = createReducer(
     (state: IAppState): IAppState => {
       return {
         ...state,
-        editors: [...APP_INITIAL_STATE.editors],
+        pages: [...APP_INITIAL_STATE.pages],
       };
     },
   ),

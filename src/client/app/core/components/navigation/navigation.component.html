@@ -2,11 +2,11 @@
   <div class="menu-bar__wrapper">
     <span class="menu-item menu-item__label">Home</span>
     <span
-      *ngFor="let editor of editors"
+      *ngFor="let page of pages"
       class="menu-item menu-item__label"
-      [class.menu-item__label--selected]="editor.selected"
-      (click)="navigate.next(editor)"
-      >{{ editor.label }}
+      [class.menu-item__label--selected]="page.selected"
+      (click)="navigate.next(page)"
+      >{{ page.label }}
     </span>
   </div>
 </div>

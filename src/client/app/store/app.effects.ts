@@ -18,13 +18,13 @@ export class AppEffects {
     this.actions$.pipe(
       ofType(checkCurrentRoute),
       withLatestFrom(this.store.select(getAllEditors)),
-      switchMap(([{ url }, editors]) => {
+      switchMap(([{ url }, pages]) => {
         if (url === '') {
           return of(noEditorSelected());
         }
-        const editor = editors.find(item => item.path === url);
-        if (editor && !editor.selected) {
-          return of(editorSelected({ editor }));
+        const page = pages.find(item => item.path === url);
+        if (page && !page.selected) {
+          return of(editorSelected({ page }));
         }
         return EMPTY;
       }),
@@ -34,10 +34,10 @@ export class AppEffects {
   editorSelect$ = createEffect(() =>
     this.actions$.pipe(
       ofType(editorSelect),
-      filter(paylod => paylod.editor !== undefined),
-      map(({ editor }) => {
-        this.router.navigateByUrl(editor.path);
-        return editorSelected({ editor });
+      filter(paylod => paylod.page !== undefined),
+      map(({ page }) => {
+        this.router.navigateByUrl(page.path);
+        return editorSelected({ page });
       }),
     ),
   );

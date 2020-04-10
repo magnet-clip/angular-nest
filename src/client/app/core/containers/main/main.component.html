@@ -1,7 +1,7 @@
 <div class="page">
   <header class="header">
     <app-navigation
-      [editors]="facade.editors$ | async"
+      [pages]="facade.editors$ | async"
       (navigate)="facade.navigate($event)"
     ></app-navigation>
   </header>

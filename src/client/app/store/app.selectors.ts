@@ -5,5 +5,5 @@ const getAllState = (state: any): IAppState => state.app;
 
 export const getAllEditors = createSelector(
   getAllState,
-  (state: IAppState) => state.editors,
+  (state: IAppState) => state.pages,
 );

@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Editor } from '../models/editor';
 import { editorSelect, checkCurrentRoute } from '../store/app.actions';
 import { getAllEditors } from '../store/app.selectors';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
+import { NavPage } from '../models/nav-page';
 
 @Injectable({
   providedIn: 'root',
@@ -12,8 +12,8 @@ import { filter, map } from 'rxjs/operators';
 export class NavigationService {
   editors$ = this.store.select(getAllEditors);
 
-  public navigate(editor: Editor) {
-    this.store.dispatch(editorSelect({ editor }));
+  public navigate(page: NavPage) {
+    this.store.dispatch(editorSelect({ page }));
   }
 
   constructor(private store: Store<any>, private router: Router) {

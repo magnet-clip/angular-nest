@@ -1,21 +1,20 @@
-import { Editor } from '../models/editor';
+import { NavPage } from '../models/nav-page';
 
 export interface IAppState {
-  editors: Editor[];
+  pages: NavPage[];
 }
 
 export const APP_INITIAL_STATE: IAppState = {
-  editors: [
-    { path: '/quill', label: 'Quill', free: true, selected: false },
+  pages: [
+    { path: '/quill', label: 'Quill', selected: false },
     {
       path: '/summernote',
       label: 'Summernote',
-      free: true,
       selected: false,
     },
-    { path: '/jodit', label: 'Jodit', free: true, selected: false },
-    { path: '/ngx-wig', label: 'Ngx-Wig', free: true, selected: false },
-    { path: '/tinymce', label: 'TinyMCE', free: true, selected: false },
+    { path: '/jodit', label: 'Jodit', selected: false },
+    { path: '/ngx-wig', label: 'Ngx-Wig', selected: false },
+    { path: '/tinymce', label: 'TinyMCE', selected: false },
     // { path: '/froala', label: 'Froala', free: false, selected: false },
     // { path: '/ckeditor', label: 'CKEditor', free: false, selected: false },
   ],
