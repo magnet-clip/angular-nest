@@ -1,15 +1,38 @@
 <div class="wrapper">
+  <div class="notes">
+    <div class="notes__section">
+      <div class="notes__header">Links:</div>
+      <div class="notes__content">
+        <li><a href="https://summernote.org/">Сайт</a></li>
+        <li>
+          <a href="https://github.com/summernote/summernote">Сам Summernote</a>
+        </li>
+        <li>
+          <a href="https://github.com/lula/ngx-summernote">Обертка Angular</a>
+        </li>
+      </div>
+    </div>
+    <div class="notes__section">
+      <div class="notes__header">License:</div>
+      <div class="notes__content"><li>Сам Summernote - MIT</li></div>
+      <div class="notes__content">
+        <li>Обертка - MIT</li>
+      </div>
+    </div>
+    <div class="notes__section">
+      <div class="notes__header">Notes:</div>
+      <div class="notes__content">
+        <div>- Ставится не менее глючно, чем квилл.</div>
+        <div>- Плохая документация на гитхабе.</div>
+        <div>? Требует подключения jQuery и тоже глобальных стилей.</div>
+        <div>? Зачем-то нужен HttpModule</div>
+        <div>+ Из коробки вставляет картинки через Ctrl+V</div>
+        <div>+ Умеет фуллскрин</div>
+        <div>+ Умеет таблицы, хотя удаляет столбцы через раз</div>
+      </div>
+    </div>
+  </div>
   <div class="editor">
     <div [ngxSummernote]></div>
-  </div>
-  <div class="notes">
-    Vs Quill:
-    <li>Ставится не менее глючно, чем квилл.</li>
-    <li>Плохая документация на гитхабе.</li>
-    <li>Требует подключения jQuery и тоже глобальных стилей.</li>
-    <li>Зачем-то нужен HttpModule</li>
-    <li>Зато из коробки вставляет картинки через Ctrl+V</li>
-    <li>И умеет фуллскрин</li>
-    <li>И умеет таблицы, хотя удаляет столбцы через раз</li>
   </div>
 </div>
