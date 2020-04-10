@@ -28,6 +28,13 @@ const routes: Routes = [
             m => m.JodditModule,
           ),
       },
+      {
+        path: 'ngx-wig',
+        loadChildren: () =>
+          import('../editor/modules/ngx-wig/ngx-wig.module').then(
+            m => m.NgxWigEditorModule,
+          ),
+      },
     ],
   },
 ];

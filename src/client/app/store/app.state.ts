@@ -14,7 +14,7 @@ export const APP_INITIAL_STATE: IAppState = {
       selected: false,
     },
     { path: '/jodit', label: 'Jodit', free: true, selected: false },
-    // { path: '/ngx-wig', label: 'Ngx-Wig', free: true, selected: false },
+    { path: '/ngx-wig', label: 'Ngx-Wig', free: true, selected: false },
     // { path: '/froala', label: 'Froala', free: false, selected: false },
     // { path: '/ckeditor', label: 'CKEditor', free: false, selected: false },
   ],
