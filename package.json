@@ -85,6 +85,7 @@
     "@ngrx/router-store": "^9.1.0",
     "@ngrx/store": "^9.1.0",
     "@ngrx/store-devtools": "^9.1.0",
+    "@tinymce/tinymce-angular": "^3.5.0",
     "jodit": "^3.3.24",
     "jodit-angular": "^1.0.99",
     "jquery": "^3.4.1",
@@ -96,6 +97,7 @@
     "rimraf": "^3.0.2",
     "rxjs": "~6.5.4",
     "summernote": "^0.8.16",
+    "tinymce": "^5.2.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

@@ -35,6 +35,13 @@ const routes: Routes = [
             m => m.NgxWigEditorModule,
           ),
       },
+      {
+        path: 'tinymce',
+        loadChildren: () =>
+          import('../editor/modules/tinymce/tinymce.module').then(
+            m => m.TinyMceModule,
+          ),
+      },
     ],
   },
 ];
